@@ -1,0 +1,11 @@
+<h1>{{ member.name }}</h1>
+<p>Email: {{ member.email }}</p>
+<p>Membership Type: {{ member.membership_type.name }}</p>
+<p>Status: {{ member.status }}</p>
+
+<h2>Check-In History</h2>
+<ul>
+  {% for check_in in check_ins %}
+    <li>{{ check_in.timestamp }} - {{ check_in.location }} - {{ check_in.training_session_type }}</li>
+  {% endfor %}
+</ul>
